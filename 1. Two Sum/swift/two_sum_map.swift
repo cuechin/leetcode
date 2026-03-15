@@ -1,12 +1,13 @@
-// O(n^2)
+// O(n)
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var map = [Int: Int]()
         for i in nums.indices {
-            for j in nums.indices {
-                if (nums[i] + nums[j] == target && i != j){
-                    return [i,j]
-                }
+            let faltante = target - nums[i]
+            if let j = map[faltante] {
+                return [j, i]
             }
+            map[nums[i]] = i
         }
         return []
     }
