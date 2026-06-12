@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Swift
+*.dSYM
+.build/
+.swiftpm/
+
+# Java
+*.class
+target/
+.gradle/
+build/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
